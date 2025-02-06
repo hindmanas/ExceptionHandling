@@ -47,12 +47,10 @@ public class ExceptionHandling {
         try {
             double avg = average(numbers);
             System.out.println("The average is: " + avg);
-        } catch (NullPointerException e) {
+        } catch (NullPointerException | ArithmeticException e) {
             System.out.println("Exception caught: " + e.getMessage());
         } catch (NumberFormatException e) {
             System.out.println("Exception caught: Invalid number format in array.");
-        } catch (ArithmeticException e) {
-            System.out.println("Exception caught: " + e.getMessage());
         } finally {
             scanner.close();
         }
